@@ -12,11 +12,11 @@ formulaires/configurer_breves.php -text
 formulaires/editer_breve.html -text
 formulaires/editer_breve.php -text
 inc/instituer_breve.php -text
-listes/breves.html -text
 /plugin.xml -text
 prive/contenu/breve.html -text
 prive/editer/breve.html -text
 prive/infos/breve.html -text
 prive/infos/breve_fonctions.php -text
+prive/listes/breves.html -text
 prive/squelettes/contenu/page-breves.html -text
 public/breves.php -text
