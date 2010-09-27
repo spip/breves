@@ -1,0 +1,7 @@
+* text=auto !eol
+base/breves.php -text
+base/breves_upgrade.php -text
+/breves_autoriser.php -text
+/breves_pipelines.php -text
+/plugin.xml -text
+public/breves.php -text
