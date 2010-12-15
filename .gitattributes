@@ -19,6 +19,5 @@ prive/infos/breve.html -text
 prive/infos/breve_fonctions.php -text
 prive/listes/breves.html -text
 prive/squelettes/contenu/breves.html -text
-public/breves.php -text
 puce_statut/breve.php -text
 urls/generer_url_ecrire_breve.php -text
