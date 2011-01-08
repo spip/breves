@@ -19,5 +19,15 @@ prive/infos/breve.html -text
 prive/infos/breve_fonctions.php -text
 prive/listes/breves.html -text
 prive/squelettes/contenu/breves.html -text
+prive/themes/spip/images/breve-16.png -text
+prive/themes/spip/images/breve-24.png -text
+prive/themes/spip/images/breve-add-16.png -text
+prive/themes/spip/images/breve-add-24.png -text
+prive/themes/spip/images/breve-del-16.png -text
+prive/themes/spip/images/breve-del-24.png -text
+prive/themes/spip/images/breve-edit-16.png -text
+prive/themes/spip/images/breve-edit-24.png -text
+prive/themes/spip/images/breve-new-16.png -text
+prive/themes/spip/images/breve-new-24.png -text
 puce_statut/breve.php -text
 urls/generer_url_ecrire_breve.php -text
