@@ -5,8 +5,6 @@ base/breves.php -text
 base/breves_upgrade.php -text
 /breves_autoriser.php -text
 /breves_pipelines.php -text
-exec/breves_edit.php -text
-exec/breves_voir.php -text
 formulaires/configurer_breves.html -text
 formulaires/configurer_breves.php -text
 formulaires/editer_breve.html -text
@@ -19,8 +17,10 @@ prive/infos/breve.html -text
 prive/infos/breve_fonctions.php -text
 prive/listes/breves.html -text
 prive/squelettes/contenu/breve.html -text
+prive/squelettes/contenu/breve_edit.html -text
 prive/squelettes/contenu/breves.html -text
 prive/squelettes/navigation/breve.html -text
+prive/squelettes/navigation/breve_edit.html -text
 prive/style_prive_plugin_breves.html -text
 prive/themes/spip/images/breve-16.png -text
 prive/themes/spip/images/breve-24.png -text
