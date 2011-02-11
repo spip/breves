@@ -18,6 +18,7 @@ prive/infos/breve_fonctions.php -text
 prive/listes/breves.html -text
 prive/squelettes/contenu/breve.html -text
 prive/squelettes/contenu/breve_edit.html -text
+prive/squelettes/contenu/breve_edit_fonctions.php -text
 prive/squelettes/contenu/breves.html -text
 prive/squelettes/navigation/breve.html -text
 prive/squelettes/navigation/breve_edit.html -text
