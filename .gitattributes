@@ -12,7 +12,6 @@ formulaires/editer_breve.php -text
 inc/instituer_breve.php -text
 /plugin.xml -text
 prive/contenu/breve.html -text
-prive/editer/breve.html -text
 prive/infos/breve.html -text
 prive/infos/breve_fonctions.php -text
 prive/listes/breves.html -text
