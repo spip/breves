@@ -11,10 +11,10 @@ formulaires/editer_breve.html -text
 formulaires/editer_breve.php -text
 inc/instituer_breve.php -text
 /plugin.xml -text
-prive/contenu/breve.html -text
-prive/infos/breve.html -text
-prive/infos/breve_fonctions.php -text
-prive/listes/breves.html -text
+prive/objets/contenu/breve.html -text
+prive/objets/infos/breve.html -text
+prive/objets/infos/breve_fonctions.php -text
+prive/objets/liste/breves.html -text
 prive/squelettes/contenu/breve.html -text
 prive/squelettes/contenu/breve_edit.html -text
 prive/squelettes/contenu/breves.html -text
