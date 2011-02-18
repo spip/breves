@@ -18,6 +18,7 @@ prive/objets/liste/breves.html -text
 prive/squelettes/contenu/breve.html -text
 prive/squelettes/contenu/breve_edit.html -text
 prive/squelettes/contenu/breves.html -text
+prive/squelettes/extra/breve.html -text
 prive/squelettes/navigation/breve.html -text
 prive/squelettes/navigation/breve_edit.html -text
 prive/style_prive_plugin_breves.html -text
