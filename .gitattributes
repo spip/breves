@@ -10,6 +10,7 @@ formulaires/configurer_breves.php -text
 formulaires/editer_breve.html -text
 formulaires/editer_breve.php -text
 inc/instituer_breve.php -text
+lang/breves_fr.php -text
 /plugin.xml -text
 prive/objets/contenu/breve.html -text
 prive/objets/infos/breve.html -text
