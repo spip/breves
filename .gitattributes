@@ -2,7 +2,7 @@
 action/editer_breve.php -text
 action/instituer_breve.php -text
 base/breves.php -text
-base/breves_upgrade.php -text
+/breves_administrations.php -text
 /breves_autoriser.php -text
 /breves_pipelines.php -text
 formulaires/configurer_breves.html -text
