@@ -75,7 +75,6 @@ lang/breves_tr.php -text
 lang/breves_tt.php -text
 lang/breves_vi.php -text
 lang/breves_zh.php -text
-/plugin.xml -text
 prive/objets/contenu/breve.html -text
 prive/objets/infos/breve.html -text
 prive/objets/infos/breve_fonctions.php -text
