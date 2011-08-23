@@ -9,7 +9,6 @@ formulaires/configurer_breves.html -text
 formulaires/configurer_breves.php -text
 formulaires/editer_breve.html -text
 formulaires/editer_breve.php -text
-inc/instituer_breve.php -text
 lang/breves.xml -text
 lang/breves_ar.php -text
 lang/breves_ast.php -text
@@ -77,7 +76,6 @@ lang/breves_vi.php -text
 lang/breves_zh.php -text
 prive/objets/contenu/breve.html -text
 prive/objets/infos/breve.html -text
-prive/objets/infos/breve_fonctions.php -text
 prive/objets/liste/breves.html -text
 prive/squelettes/contenu/breve.html -text
 prive/squelettes/contenu/breve_edit.html -text
