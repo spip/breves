@@ -1,6 +1,5 @@
 * text=auto !eol
 action/editer_breve.php -text
-action/instituer_breve.php -text
 base/breves.php -text
 /breves_administrations.php -text
 /breves_autoriser.php -text
