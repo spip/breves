@@ -84,6 +84,7 @@ lang/breves_vi.php -text
 lang/breves_wo.php -text
 lang/breves_zh.php -text
 lang/paquet-breves.xml -text
+lang/paquet-breves_en.php -text
 lang/paquet-breves_sk.php -text
 prive/objets/contenu/breve.html -text
 prive/objets/infos/breve.html -text
