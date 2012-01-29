@@ -3,6 +3,7 @@ action/editer_breve.php -text
 base/breves.php -text
 /breves_administrations.php -text
 /breves_autoriser.php -text
+/breves_ieconfig.php -text
 /breves_pipelines.php -text
 formulaires/configurer_breves.html -text
 formulaires/configurer_breves.php -text
