@@ -88,10 +88,13 @@ lang/paquet-breves.xml -text
 lang/paquet-breves_ar.php -text
 lang/paquet-breves_de.php -text
 lang/paquet-breves_en.php -text
+lang/paquet-breves_eo.php -text
 lang/paquet-breves_es.php -text
 lang/paquet-breves_fa.php -text
 lang/paquet-breves_fr_tu.php -text
 lang/paquet-breves_it.php -text
+lang/paquet-breves_lb.php -text
+lang/paquet-breves_nl.php -text
 lang/paquet-breves_pt_br.php -text
 lang/paquet-breves_ru.php -text
 lang/paquet-breves_sk.php -text
