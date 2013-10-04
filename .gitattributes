@@ -54,7 +54,6 @@ lang/breves_nap.php -text
 lang/breves_nb.php -text
 lang/breves_ne.php -text
 lang/breves_nl.php -text
-lang/breves_no.php -text
 lang/breves_oc_auv.php -text
 lang/breves_oc_gsc.php -text
 lang/breves_oc_lms.php -text
@@ -73,11 +72,8 @@ lang/breves_ru.php -text
 lang/breves_sc.php -text
 lang/breves_sk.php -text
 lang/breves_sq.php -text
-lang/breves_ss.php -text
 lang/breves_sv.php -text
-lang/breves_tl.php -text
 lang/breves_tr.php -text
-lang/breves_tt.php -text
 lang/breves_uk.php -text
 lang/breves_vi.php -text
 lang/breves_wo.php -text
