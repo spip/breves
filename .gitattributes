@@ -103,6 +103,7 @@ lang/paquet-breves_sk.php -text
 prive/objets/contenu/breve.html -text
 prive/objets/infos/breve.html -text
 prive/objets/liste/breves.html -text
+prive/rss/a_suivre-breves.html -text
 prive/squelettes/contenu/breve.html -text
 prive/squelettes/contenu/breve_edit.html -text
 prive/squelettes/contenu/breves.html -text
