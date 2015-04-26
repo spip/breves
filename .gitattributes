@@ -63,7 +63,6 @@ lang/breves_oc_lms.php -text
 lang/breves_oc_lnc.php -text
 lang/breves_oc_ni.php -text
 lang/breves_oc_ni_la.php -text
-lang/breves_oc_ni_mis.php -text
 lang/breves_oc_prv.php -text
 lang/breves_oc_va.php -text
 lang/breves_pl.php -text
@@ -97,7 +96,6 @@ lang/paquet-breves_fr_tu.php -text
 lang/paquet-breves_it.php -text
 lang/paquet-breves_lb.php -text
 lang/paquet-breves_nl.php -text
-lang/paquet-breves_oc_ni_mis.php -text
 lang/paquet-breves_pt.php -text
 lang/paquet-breves_pt_br.php -text
 lang/paquet-breves_ru.php -text
