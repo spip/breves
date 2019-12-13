@@ -1,7 +1,7 @@
 <paquet
 	prefix="breves"
 	categorie="edition"
-	version="1.5.2"
+	version="1.6.0"
 	etat="stable"
 	compatibilite="[3.3.0-dev;3.3.*]"
 	logo="prive/themes/spip/images/breve-32.png"
@@ -18,7 +18,6 @@
 	<pipeline nom="configurer_liste_metas" inclure="breves_pipelines.php" />
 	<pipeline nom="declarer_tables_interfaces" inclure="base/breves.php" />
 	<pipeline nom="declarer_tables_objets_sql" inclure="base/breves.php" />
-	<pipeline nom="lister_champs_selection_conditionnelle" inclure="breves_pipelines.php" />
 	<pipeline nom="autoriser" inclure="breves_autoriser.php" />
 	<pipeline nom="rubrique_encours" inclure="breves_pipelines.php" />
 	<pipeline nom="affiche_enfants" inclure="breves_pipelines.php" />
