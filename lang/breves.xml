@@ -98,7 +98,9 @@
 	<langue code="oc_gsc" url="https://trad.spip.net/tradlang_module/breves?lang_cible=oc_gsc" total="29" traduits="18" relire="0" modifs="7" nouveaux="4" pourcent="62.07" />
 	<langue code="oc_lms" url="https://trad.spip.net/tradlang_module/breves?lang_cible=oc_lms" total="29" traduits="18" relire="0" modifs="7" nouveaux="4" pourcent="62.07" />
 	<langue code="oc_lnc" url="https://trad.spip.net/tradlang_module/breves?lang_cible=oc_lnc" total="29" traduits="18" relire="0" modifs="7" nouveaux="4" pourcent="62.07" />
-	<langue code="oc_ni" url="https://trad.spip.net/tradlang_module/breves?lang_cible=oc_ni" total="29" traduits="18" relire="0" modifs="7" nouveaux="4" pourcent="62.07" />
+	<langue code="oc_ni" url="https://trad.spip.net/tradlang_module/breves?lang_cible=oc_ni" total="29" traduits="29" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="Bastian" lien="https://trad.spip.net/auteur/bastian" />
+	</langue>
 	<langue code="oc_ni_la" url="https://trad.spip.net/tradlang_module/breves?lang_cible=oc_ni_la" total="29" traduits="18" relire="0" modifs="7" nouveaux="4" pourcent="62.07" />
 	<langue code="oc_ni_mis" url="https://trad.spip.net/tradlang_module/breves?lang_cible=oc_ni_mis" total="29" traduits="29" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="sylvain" lien="https://trad.spip.net/auteur/sylvain" />
