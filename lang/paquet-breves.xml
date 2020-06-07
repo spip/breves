@@ -11,6 +11,9 @@
 	<langue code="ast" url="https://trad.spip.net/tradlang_module/paquet-breves?lang_cible=ast" total="2" traduits="2" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Xuacu" lien="https://trad.spip.net/auteur/xuacu" />
 	</langue>
+	<langue code="bn" url="https://trad.spip.net/tradlang_module/paquet-breves?lang_cible=bn" total="2" traduits="2" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="nbdeditor" lien="https://trad.spip.net/auteur/nbdeditor" />
+	</langue>
 	<langue code="br" url="https://trad.spip.net/tradlang_module/paquet-breves?lang_cible=br" total="2" traduits="2" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="kerivo" lien="https://trad.spip.net/auteur/kerivo" />
 	</langue>
