@@ -120,7 +120,20 @@ function breves_declarer_tables_objets_sql($tables) {
 		'rechercher_jointures' => array(
 			'document' => array('titre' => 2, 'descriptif' => 1)
 		),
-		'champs_versionnes' => array('id_rubrique', 'titre', 'lien_titre', 'lien_url', 'texte'),
+		'champs_editables' => array(
+			'id_rubrique',
+			'titre',
+			'lien_titre',
+			'lien_url',
+			'texte',
+		),
+		'champs_versionnes' => array(
+			'id_rubrique',
+			'titre',
+			'lien_titre',
+			'lien_url',
+			'texte',
+		),
 	);
 
 	return $tables;

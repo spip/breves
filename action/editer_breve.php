@@ -136,9 +136,10 @@ function breve_inserer($id_rubrique, $set = null) {
 function breve_modifier($id_breve, $set = null) {
 
 	include_spip('inc/modifier');
+	include_spip('inc/filtres');
 	$c = collecter_requests(
 		// white list
-		array('titre', 'texte', 'lien_titre', 'lien_url'),
+		objet_info('breve', 'champs_editables'),
 		// black list
 		array('id_parent', 'statut'),
 		// donnees eventuellement fournies
