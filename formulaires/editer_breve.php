@@ -53,8 +53,24 @@ function formulaires_editer_breve_charger_dist(
 	$row = array(),
 	$hidden = ''
 ) {
-	$valeurs = formulaires_editer_objet_charger('breve', $id_breve, $id_rubrique, $lier_trad, $retour, $config_fonc, $row,
-		$hidden);
+
+	$valeurs = formulaires_editer_objet_charger(
+		'breve',
+		$id_breve,
+		$id_rubrique,
+		$lier_trad,
+		$retour,
+		$config_fonc,
+		$row,
+		$hidden
+	);
+
+	if (test_formulaire_inclus_par_modele()) {
+		if (intval($id_breve) and !autoriser('modifier', 'breve', intval($id_breve))) {
+			$valeurs['editable'] = '';
+		}
+	}
+
 	// un bug a permis a un moment que des breves soient dans des sous rubriques
 	// lorsque ce cas se presente, il faut relocaliser la breve dans son secteur, plutot que n'importe ou
 	if ($valeurs['id_parent']) {
