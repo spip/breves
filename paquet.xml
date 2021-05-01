@@ -1,9 +1,9 @@
 <paquet
 	prefix="breves"
 	categorie="edition"
-	version="1.6.1"
+	version="2.0.0"
 	etat="stable"
-	compatibilite="[3.3.0-dev;3.3.*]"
+	compatibilite="[4.0.0-alpha;4.0.*]"
 	logo="prive/themes/spip/images/breve-32.png"
 	schema="1.0.0"
 >
