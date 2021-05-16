@@ -26,7 +26,7 @@
 			<td class='titre principale'><a href="[(#ID_BREVE|generer_url_entite{breve})]"
 					[hreflang="(#ENV{lang}|=={#LANG}|non|?{#LANG})"]
 					title="<:info_numero_abbreviation|attribut_html:> #ID_BREVE">[<span class='rang'>(#RANG).</span> ]#TITRE</a></td>
-					<td class='[(#LOGO_BREVE_NORMAL|?{logo,nologo})]'>[(#LOGO_BREVE_NORMAL|image_recadre_avec_fallback{40,40,focus})]</td>
+					<td class='[(#LOGO_BREVE_NORMAL|?{logo,nologo})]'>[(#LOGO_BREVE_NORMAL|image_recadre_avec_fallback{45,45,focus})]</td>
 					<td class='date secondaire'>[(#DATE|affdate_jourcourt)]</td>
 			<td class='id'>[(#AUTORISER{modifier,breve,#ID_BREVE}|?{
 				<a href="[(#URL_ECRIRE{breve_edit,id_breve=#ID_BREVE})]" title="<:breves:icone_modifier_breve|attribut_html:>">#ID_BREVE</a>,
