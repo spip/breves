@@ -14,6 +14,7 @@
 		<tr class='first_row'>
 			<th class='statut' scope='col'>[(#TRI{statut,<span title="<:lien_trier_statut|attribut_html:>">#</span>,ajax})]</th>
 			<th class='titre' scope='col'>[(#TRI{titre,<:info_titre:>,ajax})]</th>
+			<th class='nologo'></th>
 			<th class='date' scope='col'>[(#TRI{date,<:date:>,ajax})]</th>
 			<th class='id' scope='col'>[(#TRI{id_breve,<:info_numero_abbreviation:>,ajax})]</th>
 		</tr>
@@ -22,11 +23,11 @@
 	<BOUCLE_liste_bre(BREVES){id_?}{where?}{recherche?}{statut?}{tri #ENV{par,date},#GET{defaut_tri}}{pagination #ENV{nb,10}}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='statut'>[(#STATUT|puce_statut{'breve',#ID_BREVE,#ID_RUBRIQUE})]</td>
-			<td class='titre principale'>[(#LOGO_BREVE|image_reduire{20,26})
-				]<a href="[(#ID_BREVE|generer_url_entite{breve})]"
+			<td class='titre principale'><a href="[(#ID_BREVE|generer_url_entite{breve})]"
 					[hreflang="(#ENV{lang}|=={#LANG}|non|?{#LANG})"]
-					title="<:info_numero_abbreviation|attribut_html:> #ID_BREVE">#TITRE</a></td>
-			<td class='date secondaire'>[(#DATE|affdate_jourcourt)]</td>
+					title="<:info_numero_abbreviation|attribut_html:> #ID_BREVE">[<span class='rang'>(#RANG).</span> ]#TITRE</a></td>
+					<td class='[(#LOGO_BREVE_NORMAL|?{logo,nologo})]'>[(#LOGO_BREVE_NORMAL|image_recadre_avec_fallback{40,40,focus})]</td>
+					<td class='date secondaire'>[(#DATE|affdate_jourcourt)]</td>
 			<td class='id'>[(#AUTORISER{modifier,breve,#ID_BREVE}|?{
 				<a href="[(#URL_ECRIRE{breve_edit,id_breve=#ID_BREVE})]" title="<:breves:icone_modifier_breve|attribut_html:>">#ID_BREVE</a>,
 				#ID_BREVE
