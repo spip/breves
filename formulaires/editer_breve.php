@@ -50,7 +50,7 @@ function formulaires_editer_breve_charger_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'breves_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	$valeurs = formulaires_editer_objet_charger(
@@ -109,10 +109,10 @@ function formulaires_editer_breve_identifier_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'breves_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
-	return serialize(array(intval($id_breve), $lier_trad));
+	return serialize([intval($id_breve), $lier_trad]);
 }
 
 
@@ -164,13 +164,13 @@ function formulaires_editer_breve_verifier_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'breves_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	// auto-renseigner le titre si il n'existe pas
-	titre_automatique('titre', array('texte'));
+	titre_automatique('titre', ['texte']);
 	// on ne demande pas le titre obligatoire : il sera rempli a la volee dans editer_article si vide
-	$erreurs = formulaires_editer_objet_verifier('breve', $id_breve, array('id_parent'));
+	$erreurs = formulaires_editer_objet_verifier('breve', $id_breve, ['id_parent']);
 
 	return $erreurs;
 }
@@ -203,7 +203,7 @@ function formulaires_editer_breve_traiter_dist(
 	$retour = '',
 	$lier_trad = 0,
 	$config_fonc = 'breves_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	return formulaires_editer_objet_traiter(

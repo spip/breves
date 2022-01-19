@@ -131,6 +131,6 @@ function autoriser_breve_modifier_dist($faire, $type, $id, $qui, $opt) {
 		$r and (
 		($r['statut'] == 'publie' or (isset($opt['statut']) and $opt['statut'] == 'publie'))
 			? autoriser('publierdans', 'rubrique', $r['id_rubrique'], $qui, $opt)
-			: in_array($qui['statut'], array('0minirezo', '1comite'))
+			: in_array($qui['statut'], ['0minirezo', '1comite'])
 		);
 }

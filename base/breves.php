@@ -53,7 +53,7 @@ function breves_declarer_tables_interfaces($interfaces) {
  *     Description complétée des tables
  */
 function breves_declarer_tables_objets_sql($tables) {
-	$tables['spip_breves'] = array(
+	$tables['spip_breves'] = [
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'breves:breves',
 		'texte_objet' => 'breves:breve',
@@ -68,7 +68,7 @@ function breves_declarer_tables_objets_sql($tables) {
 		'date' => 'date_heure',
 		'principale' => 'oui',
 		'introduction_longueur' => '300',
-		'field' => array(
+		'field' => [
 			'id_breve' => 'bigint(21) NOT NULL',
 			'date_heure' => "datetime DEFAULT '0000-00-00 00:00:00' NOT NULL",
 			'titre' => "text DEFAULT '' NOT NULL",
@@ -80,61 +80,61 @@ function breves_declarer_tables_objets_sql($tables) {
 			'lang' => "VARCHAR(10) DEFAULT '' NOT NULL",
 			'langue_choisie' => "VARCHAR(3) DEFAULT 'non'",
 			'maj' => 'TIMESTAMP'
-		),
-		'key' => array(
+		],
+		'key' => [
 			'PRIMARY KEY' => 'id_breve',
 			'KEY id_rubrique' => 'id_rubrique',
-		),
-		'parent' => array('type' => 'rubrique', 'champ' => 'id_rubrique'),
-		'join' => array(
+		],
+		'parent' => ['type' => 'rubrique', 'champ' => 'id_rubrique'],
+		'join' => [
 			'id_breve' => 'id_breve',
 			'id_rubrique' => 'id_rubrique'
-		),
-		'statut' => array(
-			array(
+		],
+		'statut' => [
+			[
 				'champ' => 'statut',
 				'publie' => 'publie',
 				'previsu' => 'publie,prop',
 				'exception' => 'statut'
-			)
-		),
+			]
+		],
 		'texte_changer_statut' => 'breves:entree_breve_publiee',
 		'aide_changer_statut' => 'brevesstatut',
-		'statut_titres' => array(
+		'statut_titres' => [
 			'prop' => 'breves:titre_breve_proposee',
 			'publie' => 'breves:titre_breve_publiee',
 			'refuse' => 'breves:titre_breve_refusee',
-		),
-		'statut_textes_instituer' => array(
+		],
+		'statut_textes_instituer' => [
 			'prop' => 'breves:item_breve_proposee', //_T('texte_statut_propose_evaluation')
 			'publie' => 'breves:item_breve_validee', //_T('texte_statut_publie')
 			'refuse' => 'breves:item_breve_refusee', //_T('texte_statut_refuse')
-		),
+		],
 
-		'rechercher_champs' => array(
+		'rechercher_champs' => [
 			'titre' => 8,
 			'texte' => 2,
 			'lien_titre' => 1,
 			'lien_url' => 1
-		),
-		'rechercher_jointures' => array(
-			'document' => array('titre' => 2, 'descriptif' => 1)
-		),
-		'champs_editables' => array(
+		],
+		'rechercher_jointures' => [
+			'document' => ['titre' => 2, 'descriptif' => 1]
+		],
+		'champs_editables' => [
 			'id_rubrique',
 			'titre',
 			'lien_titre',
 			'lien_url',
 			'texte',
-		),
-		'champs_versionnes' => array(
+		],
+		'champs_versionnes' => [
 			'id_rubrique',
 			'titre',
 			'lien_titre',
 			'lien_url',
 			'texte',
-		),
-	);
+		],
+	];
 
 	return $tables;
 }

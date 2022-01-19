@@ -26,10 +26,12 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *     Environnement du formulaire
  **/
 function formulaires_configurer_breves_charger_dist() {
-	$valeurs = array();
-	foreach (array(
+	$valeurs = [];
+	foreach (
+		[
 		'activer_breves',
-	) as $m) {
+		] as $m
+	) {
 		$valeurs[$m] = $GLOBALS['meta'][$m];
 	}
 
@@ -43,10 +45,12 @@ function formulaires_configurer_breves_charger_dist() {
  *     Retours du traitement
  **/
 function formulaires_configurer_breves_traiter_dist() {
-	$res = array('editable' => true);
-	foreach (array(
+	$res = ['editable' => true];
+	foreach (
+		[
 		'activer_breves',
-	) as $m) {
+		] as $m
+	) {
 		if (!is_null($v = _request($m))) {
 			ecrire_meta($m, $v == 'oui' ? 'oui' : 'non');
 		}

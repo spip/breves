@@ -36,7 +36,8 @@ function breves_upgrade($nom_meta_base_version, $version_cible) {
 	// pour gerer l'historique des installations SPIP <=2.1
 	if (!isset($GLOBALS['meta'][$nom_meta_base_version])) {
 		$trouver_table = charger_fonction('trouver_table', 'base');
-		if ($desc = $trouver_table('spip_breves')
+		if (
+			$desc = $trouver_table('spip_breves')
 			and isset($desc['exist']) and $desc['exist']
 		) {
 			ecrire_meta($nom_meta_base_version, '1.0.0');
@@ -44,10 +45,10 @@ function breves_upgrade($nom_meta_base_version, $version_cible) {
 		// si pas de table en base, on fera une simple creation de base
 	}
 
-	$maj = array();
-	$maj['create'] = array(
-		array('maj_tables', array('spip_breves')),
-	);
+	$maj = [];
+	$maj['create'] = [
+		['maj_tables', ['spip_breves']],
+	];
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);

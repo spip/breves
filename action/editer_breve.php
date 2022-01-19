@@ -45,12 +45,12 @@ function action_editer_breve_dist($arg = null) {
 	}
 
 	if (!$id_breve) {
-		return array(0, '');
+		return [0, ''];
 	} // erreur
 
 	$err = breve_modifier($id_breve);
 
-	return array($id_breve, $err);
+	return [$id_breve, $err];
 }
 
 
@@ -77,17 +77,17 @@ function breve_inserer($id_rubrique, $set = null) {
 	}
 
 	// La langue a la creation : c'est la langue de la rubrique
-	$row = sql_fetsel('lang, id_secteur', 'spip_rubriques', 'id_rubrique='.intval($id_rubrique));
+	$row = sql_fetsel('lang, id_secteur', 'spip_rubriques', 'id_rubrique=' . intval($id_rubrique));
 	$lang = $row['lang'];
 	$id_rubrique = $row['id_secteur']; // garantir la racine
 
-	$champs = array(
+	$champs = [
 		'id_rubrique' => $id_rubrique,
 		'statut' => 'prop',
 		'date_heure' => date('Y-m-d H:i:s'),
 		'lang' => $lang,
 		'langue_choisie' => 'non'
-	);
+	];
 
 	if ($set) {
 		$champs = array_merge($champs, $set);
@@ -96,23 +96,23 @@ function breve_inserer($id_rubrique, $set = null) {
 	// Envoyer aux plugins
 	$champs = pipeline(
 		'pre_insertion',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_breves',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 	$id_breve = sql_insertq('spip_breves', $champs);
 	pipeline(
 		'post_insertion',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_breves',
 				'id_objet' => $id_breve
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	return $id_breve;
@@ -141,7 +141,7 @@ function breve_modifier($id_breve, $set = null) {
 		// white list
 		objet_info('breve', 'champs_editables'),
 		// black list
-		array('id_parent', 'statut'),
+		['id_parent', 'statut'],
 		// donnees eventuellement fournies
 		$set
 	);
@@ -150,27 +150,29 @@ function breve_modifier($id_breve, $set = null) {
 	$indexation = false;
 
 	// Si la breve est publiee, invalider les caches et demander sa reindexation
-	$t = sql_getfetsel('statut', 'spip_breves', 'id_breve='.intval($id_breve));
+	$t = sql_getfetsel('statut', 'spip_breves', 'id_breve=' . intval($id_breve));
 	if ($t == 'publie') {
 		$invalideur = "id='breve/$id_breve'";
 		$indexation = true;
 	}
 
-	if ($err = objet_modifier_champs(
-		'breve',
-		$id_breve,
-		array(
+	if (
+		$err = objet_modifier_champs(
+			'breve',
+			$id_breve,
+			[
 			'data' => $set,
-			'nonvide' => array('titre' => _T('breves:titre_nouvelle_breve') . ' ' . _T('info_numero_abbreviation') . $id_breve),
+			'nonvide' => ['titre' => _T('breves:titre_nouvelle_breve') . ' ' . _T('info_numero_abbreviation') . $id_breve],
 			'invalideur' => $invalideur,
 			'indexation' => $indexation
-		),
-		$c
-	)) {
+			],
+			$c
+		)
+	) {
 		return $err;
 	}
 
-	$c = collecter_requests(array('id_parent', 'statut'), array(), $set);
+	$c = collecter_requests(['id_parent', 'statut'], [], $set);
 	$err = breve_instituer($id_breve, $c);
 
 	return $err;
@@ -191,7 +193,7 @@ function breve_modifier($id_breve, $set = null) {
  *     Null si aucun champ à modifier, chaîne vide sinon.
  */
 function breve_instituer($id_breve, $c) {
-	$champs = array();
+	$champs = [];
 
 	// Changer le statut de la breve ?
 	$row = sql_fetsel('statut, id_rubrique,lang, langue_choisie', 'spip_breves', 'id_breve=' . intval($id_breve));
@@ -201,7 +203,8 @@ function breve_instituer($id_breve, $c) {
 	$langue_old = $row['lang'];
 	$langue_choisie_old = $row['langue_choisie'];
 
-	if (isset($c['statut'])
+	if (
+		isset($c['statut'])
 		and $c['statut']
 		and $c['statut'] != $statut
 		and autoriser('publierdans', 'rubrique', $id_rubrique)
@@ -242,15 +245,15 @@ function breve_instituer($id_breve, $c) {
 	// Envoyer aux plugins
 	$champs = pipeline(
 		'pre_edition',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_breves',
 				'id_objet' => $id_breve,
 				'action' => 'instituer',
 				'statut_ancien' => $statut_ancien,
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	if (!$champs) {
@@ -274,22 +277,24 @@ function breve_instituer($id_breve, $c) {
 	// Pipeline
 	pipeline(
 		'post_edition',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_breves',
 				'id_objet' => $id_breve,
 				'action' => 'instituer',
 				'statut_ancien' => $statut_ancien,
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 
 	// Notifications
 	if ($notifications = charger_fonction('notifications', 'inc')) {
-		$notifications('instituerbreve', $id_breve,
-			array('statut' => $statut, 'statut_ancien' => $statut_ancien)
+		$notifications(
+			'instituerbreve',
+			$id_breve,
+			['statut' => $statut, 'statut_ancien' => $statut_ancien]
 		);
 	}
 

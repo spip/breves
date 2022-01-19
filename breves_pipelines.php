@@ -52,12 +52,12 @@ function breves_rubrique_encours($flux) {
 		//
 		// Les breves a valider
 		//
-		$flux['data'] .= $lister_objets('breves', array(
+		$flux['data'] .= $lister_objets('breves', [
 			'titre' => _T('breves:info_breves_valider'),
-			'statut' => array('prepa', 'prop'),
+			'statut' => ['prepa', 'prop'],
 			'id_rubrique' => $id_rubrique,
 			'par' => 'date_heure'
-		));
+		]);
 	}
 
 	return $flux;
@@ -73,7 +73,8 @@ function breves_rubrique_encours($flux) {
  * @return array       Données du pipeline
  **/
 function breves_affiche_enfants($flux) {
-	if (isset($flux['args']['exec'])
+	if (
+		isset($flux['args']['exec'])
 		and $e = trouver_objet_exec($flux['args']['exec'])
 		and $e['type'] == 'rubrique'
 		and $e['edition'] == false
@@ -84,7 +85,7 @@ function breves_affiche_enfants($flux) {
 			$lister_objets = charger_fonction('lister_objets', 'inc');
 			$bouton_breves = '';
 			$id_parent = sql_getfetsel('id_parent', 'spip_rubriques', 'id_rubrique=' . $id_rubrique);
-			if (autoriser('creerbrevedans', 'rubrique', $id_rubrique, null, array('id_parent' => $id_parent))) {
+			if (autoriser('creerbrevedans', 'rubrique', $id_rubrique, null, ['id_parent' => $id_parent])) {
 				$bouton_breves .= icone_verticale(
 					_T('breves:icone_nouvelle_breve'),
 					generer_url_ecrire('breve_edit', "id_rubrique=$id_rubrique&new=oui"),
@@ -95,12 +96,12 @@ function breves_affiche_enfants($flux) {
 					. "<br class='nettoyeur' />";
 			}
 
-			$flux['data'] .= $lister_objets('breves', array(
+			$flux['data'] .= $lister_objets('breves', [
 				'titre' => _T('breves:icone_ecrire_nouvel_article'),
 				'where' => "statut != 'prop' AND statut != 'prepa'",
 				'id_rubrique' => $id_rubrique,
 				'par' => 'date_heure'
-			));
+			]);
 			$flux['data'] .= $bouton_breves;
 		}
 	}
@@ -126,8 +127,8 @@ function breves_accueil_informations($texte) {
 
 	$q = sql_select('COUNT(*) AS cnt, statut', 'spip_breves', '', 'statut', '', '', 'COUNT(*)<>0');
 
-	$cpt = array();
-	$cpt2 = array();
+	$cpt = [];
+	$cpt2 = [];
 	$where = false;
 	if ($GLOBALS['visiteur_session']['statut'] == '0minirezo') {
 		$where = sql_allfetsel(
@@ -179,7 +180,8 @@ function breves_accueil_informations($texte) {
  * @return array       Données du pipeline
  */
 function breves_objet_compte_enfants($flux) {
-	if ($flux['args']['objet'] == 'rubrique'
+	if (
+		$flux['args']['objet'] == 'rubrique'
 		and $id_rubrique = intval($flux['args']['id_objet'])
 	) {
 		// juste les publies ?
@@ -218,8 +220,8 @@ function breves_trig_calculer_langues_rubriques($flux) {
 		$id_breve = $row['id_breve'];
 		sql_updateq(
 			'spip_breves',
-			array('lang' => $row['lang'], 'langue_choisie' => 'non'),
-			'id_breve='.intval($id_breve)
+			['lang' => $row['lang'], 'langue_choisie' => 'non'],
+			'id_breve=' . intval($id_breve)
 		);
 	}
 
@@ -245,7 +247,7 @@ function breves_calculer_rubriques($flux) {
 	while ($row = sql_fetch($r)) {
 		sql_updateq(
 			'spip_rubriques',
-			array('statut_tmp' => 'publie', 'date_tmp' => $row['date_h']),
+			['statut_tmp' => 'publie', 'date_tmp' => $row['date_h']],
 			'id_rubrique=' . intval($row['id'])
 		);
 	}
@@ -265,11 +267,11 @@ function breves_calculer_rubriques($flux) {
 function breves_accueil_encours($flux) {
 	$lister_objets = charger_fonction('lister_objets', 'inc');
 
-	$flux .= $lister_objets('breves', array(
+	$flux .= $lister_objets('breves', [
 		'titre' => afficher_plus_info(generer_url_ecrire('breves')) . _T('breves:info_breves_valider'),
-		'statut' => array('prepa', 'prop'),
+		'statut' => ['prepa', 'prop'],
 		'par' => 'date_heure'
-	));
+	]);
 
 	return $flux;
 }
@@ -342,7 +344,7 @@ function breves_boite_infos($flux) {
  */
 function breves_affiche_milieu($flux) {
 	if ($flux['args']['exec'] == 'configurer_contenu') {
-		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', array('configurer' => 'configurer_breves'));
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', ['configurer' => 'configurer_breves']);
 	}
 
 	return $flux;
