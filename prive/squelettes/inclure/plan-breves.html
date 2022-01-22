@@ -23,7 +23,7 @@
 				{si #GET{lister}}
 				>
 				<li id="breve-#ID_BREVE" class="item" data-jstree='{"type":"breve"}' data-objet="breve">
-					<a href="[(#ID_BREVE|generer_url_entite{breve})]"
+					<a href="[(#ID_BREVE|generer_objet_url{breve})]"
 						title="[(#VAL{breve}|objet_info{texte_objet}|_T) #ID_BREVE]">
 						[(#STATUT|puce_statut{breve}) ][(#TITRE|couper{80}|sinon{<:info_sans_titre:>})]
 					</a>
