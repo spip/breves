@@ -124,7 +124,7 @@ function formulaires_editer_breve_identifier_dist(
  * return array
  *     Configuration pour le formulaire
  */
-function breves_edit_config($row) {
+function breves_edit_config(array $row): array {
 
 	$config = [];
 	$config['lignes'] = 8;
