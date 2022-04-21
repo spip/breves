@@ -12,7 +12,7 @@
 		    	<label for="titre"><:info_titre:></label>[
 				<span class='erreur_message'>(#ENV**{erreurs/titre})</span>
 				]<input type='text' class='text' name='titre' id='titre' value="#ENV*{titre}"
-					placeholder="<:breves:titre_nouvelle_breve:>" />
+					placeholder="<:breves:titre_nouvelle_breve|attribut_html:>" />
 	    </div>
 
 	 	[<div class="editer editer_parent[ (#ENV**{erreurs/id_parent}|oui)erreur]">
